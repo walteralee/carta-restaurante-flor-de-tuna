@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Carta | Flor de Tuna</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Descubre la carta de Flor de Tuna: cocina mediterránea y platos a la brasa."
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- =====================================================
+        FAVICON
+  ====================================================== -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS local -->
+    <link rel="stylesheet" href="carta.css" />
+
+    <!-- JS local -->
+    <script defer src="carta.js"></script>
+  </head>
+
+  <body class="tema-beige">
+    <header class="header">
+      <nav class="navbar navbar-center">
+        <a href="carta.html" class="logo">
+          <img
+            src="assets/imagenes/logo-restaurante-flor-de-tuna-chiclana.jpg"
+            alt="Flor de Tuna"
+          />
+        </a>
+      </nav>
+    </header>
+
+    <main class="carta" role="main">
+      <!-- =====================================================
+      PRESENTACIÓN — HERO DE CARTA
+      ====================================================== -->
+      <section
+        class="presentacion-seccion hero-carta"
+        aria-labelledby="titulo-hero-carta"
+      >
+        <div class="overlay" aria-hidden="true"></div>
+        <h1 class="titulo-seccion" id="titulo-hero-carta">CARTA</h1>
+      </section>
+
+      <!-- =====================================================
+      SECCIÓN PRINCIPAL — CONTENIDO DE CARTA
+      ====================================================== -->
+      <section id="carta" class="carta-seccion" aria-labelledby="titulo-carta">
+        <div id="contenedor-presentacion-carta" role="presentation"></div>
+
+        <!-- Contenedor global -->
+        <div id="contenedor-carta">
+          <!-- Menú de categorías -->
+          <div
+            class="categorias-container"
+            role="tablist"
+            aria-label="Categorías del menú"
+          >
+            <button class="categoria-btn active" data-categoria="todo">
+              Todo</button
+            ><button class="categoria-btn" data-categoria="para-compartir-o-no">
+              Para compartir o no</button
+            ><button class="categoria-btn" data-categoria="frituras">
+              Frituras</button
+            ><button
+              class="categoria-btn"
+              data-categoria="menu-infantil-y-no-tan-infantil"
+            >
+              Menú infantil y no tan infantil</button
+            ><button class="categoria-btn" data-categoria="brasas-verdes">
+              Brasas verdes</button
+            ><button class="categoria-btn" data-categoria="brasas-azules">
+              Brasas azules</button
+            ><button class="categoria-btn" data-categoria="brasas-rojas">
+              Brasas rojas
+            </button>
+          </div>
+
+          <!-- Contenido dinámico -->
+          <section
+            class="carta-contenido"
+            role="region"
+            aria-live="polite"
+            aria-label="Listado de platos disponibles"
+          >
+            <div class="bloque" data-categoria="para-compartir-o-no">
+              <h3>Para compartir o no</h3>
+              <p class="nota-carta">Disponemos de pan sin gluten.</p>
+              <ul>
+                <li>
+                  Pan
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">1€</span>
+                </li>
+                <li>
+                  Ensaladilla
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">Media 6€ / Entera 12€</span>
+                </li>
+                <li>
+                  Burrata, pesto, laminado de tomate, parmesano y picatostes
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/frutos_secos.ico"
+                      alt="frutos_secos"
+                      title="Frutos_secos"
+                    />
+                  </div>
+                  <span class="precio">15€</span>
+                </li>
+                <li>
+                  Ensalada de la huerta: lechuga, atún, maíz, cebollas,
+                  zanahoria y tomate.
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    />
+                  </div>
+                  <span class="precio">9,75€</span>
+                </li>
+                <li>
+                  Tabla de quesos
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/frutos_secos.ico"
+                      alt="frutos_secos"
+                      title="Frutos_secos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">Media 8,5€ / Entera 17€</span>
+                </li>
+                <li>
+                  Tabla de embutidos de la tierra: chicharrón, butifarra,
+                  longaniza y morcilla.
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">Media 7€ / Entera 13€</span>
+                </li>
+                <li>
+                  Tabla de chicharrón de chiclana
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/.ico"
+                      alt=""
+                      title=""
+                    />
+                  </div>
+                  <span class="precio">Media 5€ / Entera 9€</span>
+                </li>
+                <li>
+                  Croquetas de jamón (3 uds. / 6 uds.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio"
+                    >Media 3,5€ (3 uds.) / Entera 7€ (6 uds.)</span
+                  >
+                </li>
+                <li>
+                  Croquetas de rabo de toro (3 uds. / 6 uds.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio"
+                    >Media 4€ (3 uds.) / Entera 8€ (6 uds.)</span
+                  >
+                </li>
+                <li>
+                  Croquetas de atún encebollado (3 uds. / 6 uds.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    />
+                  </div>
+                  <span class="precio"
+                    >Media 4€ (3 uds.) / Entera 8€ (6 uds.)</span
+                  >
+                </li>
+                <li>
+                  Crujiente de langostinos, salteado oriental y salsa agridulce
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/mariscos.ico"
+                      alt="mariscos"
+                      title="Mariscos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio">12€</span>
+                </li>
+                <li>
+                  Patatas bravas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    />
+                  </div>
+                  <span class="precio">Media 5€ / Entera 9€</span>
+                </li>
+                <li>
+                  Huevos rotos con chicharrón de Chiclana
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio">Media 6€ / Entera 11€</span>
+                </li>
+                <li>
+                  Huevos rotos con jamón
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio">Media 7€ / Entera 13€</span>
+                </li>
+                <li>
+                  Cachopo de ternera, jamón, queso y pimiento. Acompañado de
+                  patatas fritas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio">15€</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bloque" data-categoria="frituras">
+              <h3>Frituras</h3>
+              <ul>
+                <li>
+                  Tortilla de camarones (unidad)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/mariscos.ico"
+                      alt="mariscos"
+                      title="Mariscos"
+                    />
+                  </div>
+                  <span class="precio">2€</span>
+                </li>
+                <li>
+                  Bienmesabe (adobo) (300 grs.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/sulfitos.ico"
+                      alt="sulfitos"
+                      title="Sulfitos"
+                    />
+                  </div>
+                  <span class="precio">11€</span>
+                </li>
+                <li>
+                  Anillas de calamar (300 grs.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/moluscos.ico"
+                      alt="moluscos"
+                      title="Moluscos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/mostaza.ico"
+                      alt="mostaza"
+                      title="Mostaza"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    />
+                  </div>
+                  <span class="precio">12€</span>
+                </li>
+                <li>
+                  Tiras de choco (300 grs.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/mariscos.ico"
+                      alt="mariscos"
+                      title="Mariscos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">14€</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="bloque"
+              data-categoria="menu-infantil-y-no-tan-infantil"
+            >
+              <h3>Menú infantil y no tan infantil</h3>
+              <ul>
+                <li>
+                  Filete de pollo parrilla o empanado con patatas fritas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">8€</span>
+                </li>
+                <li>
+                  Huevos fritos con patatas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    />
+                  </div>
+                  <span class="precio">6€</span>
+                </li>
+                <li>
+                  Filete de pollo parrilla o empanado, huevo frito y patatas
+                  fritas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">10€</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bloque" data-categoria="brasas-verdes">
+              <h3>Brasas verdes</h3>
+              <ul>
+                <li>
+                  Berenjena a la brasa, queso feta y aderezo a la griega
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                      alt="huevo"
+                      title="Huevo"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">Media 9€ / Entera 17€</span>
+                </li>
+                <li>
+                  Parrillada de verduras<span class="precio"
+                    >Media 7€ / Entera 13€</span
+                  >
+                </li>
+                <li>
+                  Hamburguesa vegana con verduras a la parrilla
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">12€</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bloque" data-categoria="brasas-azules">
+              <h3>Brasas azules</h3>
+              <ul>
+                <li>
+                  Lomo de lubina al chimichurri
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                      alt="soja"
+                      title="Soja"
+                    />
+                  </div>
+                  <span class="precio">16€</span>
+                </li>
+                <li>
+                  Lubina a la brasa (300–400 grs.)
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                      alt="pescado"
+                      title="Pescado"
+                    />
+                  </div>
+                  <span class="precio">19€</span>
+                </li>
+                <li>
+                  Pata de pulpo
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/moluscos.ico"
+                      alt="moluscos"
+                      title="Moluscos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    />
+                  </div>
+                  <span class="precio">20€</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bloque" data-categoria="brasas-rojas">
+              <h3>Brasas rojas</h3>
+              <p class="nota-carta">
+                Todas nuestras carnes van acompañadas de verduras brasa y
+                patatas fritas.
+              </p>
+              <ul>
+                <li>Chorizo criollo<span class="precio">3€</span></li>
+                <li>
+                  Entrecot de lomo bajo (300 grs.)<span class="precio"
+                    >27€</span
+                  >
+                </li>
+                <li>
+                  Solomillo de vaca (200 grs.)<span class="precio">26€</span>
+                </li>
+                <li>
+                  Chuleta de vaca (100 grs.)<span class="precio">7€</span>
+                </li>
+                <li>
+                  Solomillo de cerdo (300 grs.)<span class="precio">14€</span>
+                </li>
+                <li>Presa ibérica (300 grs.)<span class="precio">27€</span></li>
+                <li>
+                  Secreto ibérico (300 grs.)<span class="precio">23€</span>
+                </li>
+                <li>
+                  Costilla de cerdo ibérico (400 grs.)<span class="precio"
+                    >14€</span
+                  >
+                </li>
+                <li>
+                  Chuleta madurada de cerdo alimentado con castañas<span
+                    class="precio"
+                    >16€</span
+                  >
+                </li>
+                <li>
+                  Parrillada de ibéricos y ternera (400 grs.) (Lomo bajo, presa,
+                  secreto y chorizo criollo)<span class="precio">38€</span>
+                </li>
+                <li>
+                  Parrillada mixta (600 grs.) (Lomo bajo, secreto, solomillo,
+                  costilla de cerdo y chorizo criollo)<span class="precio"
+                    >30€</span
+                  >
+                </li>
+                <li>
+                  Hamburguesa de vaca con queso cheddar y patatas fritas
+                  <div class="alergenos">
+                    <img
+                      src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                      alt="lacteos"
+                      title="Lacteos"
+                    /><img
+                      src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                      alt="gluten"
+                      title="Gluten"
+                    />
+                  </div>
+                  <span class="precio">13€</span>
+                </li>
+                <li>
+                  Hamburguesa de paleta madurada, cerdos alimentados con
+                  castañas con queso cheddar y patatas fritas<span
+                    class="precio"
+                    >13€</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="bloque leyenda-alergenos">
+              <h3>Alérgenos</h3>
+              <p class="nota-carta">
+                Consulta los iconos para identificar los posibles alérgenos en
+                cada plato.
+              </p>
+              <div class="leyenda-grid">
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/gluten.ico"
+                    alt="Gluten"
+                  /><span>Gluten</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/huevo.ico"
+                    alt="Huevos"
+                  /><span>Huevos</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/lacteos.ico"
+                    alt="Lácteos"
+                  /><span>Lácteos</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/pescado.ico"
+                    alt="Pescados"
+                  /><span>Pescados</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/mariscos.ico"
+                    alt="Marisco"
+                  /><span>Marisco</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/moluscos.ico"
+                    alt="Moluscos"
+                  /><span>Moluscos</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/frutos_secos.ico"
+                    alt="Frutos secos"
+                  /><span>Frutos secos</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/sesamo.ico"
+                    alt="Sésamo"
+                  /><span>Sésamo</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/soja.ico"
+                    alt="Soja"
+                  /><span>Soja</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/mostaza.ico"
+                    alt="Mostaza"
+                  /><span>Mostaza</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/sulfitos.ico"
+                    alt="Sulfitos"
+                  /><span>Sulfitos</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/apio.ico"
+                    alt="Apio"
+                  /><span>Apio</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/altramuz.ico"
+                    alt="Altramuz"
+                  /><span>Altramuz</span>
+                </div>
+                <div>
+                  <img
+                    src="assets/carta_recursos/iconos_alergenos_carta/cacahuete.ico"
+                    alt="Cacahuete"
+                  /><span>Cacahuete</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- =====================================================
+        SECCIÓN PDF — DESCARGA CARTA COMPLETA
+        ====================================================== -->
+        <section id="contenedor-carta-pdf" aria-labelledby="titulo-pdf-carta">
+          <div class="carta-pdf-container">
+            <div class="carta-pdf-box">
+              <h3 id="titulo-pdf-carta" class="visually-hidden">
+                Carta en formato PDF
+              </h3>
+
+              <p class="descripcion">
+                Descubre los sabores que hacen de
+                <strong>Flor de Tuna</strong> un lugar único. Aquí puedes
+                descargar nuestra carta completa en PDF.
+              </p>
+
+              <a
+                href="assets/CARTA 2026.05.07.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-ver-carta"
+              >
+                <i class="fa-solid fa-utensils"></i>
+                Ver Carta en PDF
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- =====================================================
+     FOOTER — UNIVERSAL · SEO · ACCESIBILIDAD · RENDIMIENTO
+  ===================================================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <!-- Marca + dirección -->
+        <section
+          class="footer-col footer-brand"
+          aria-label="Información de contacto"
+        >
+          <img
+            src="assets/imagenes/logo_empresa_footer.png"
+            class="footer-logo-img"
+            alt="Logo del restaurante Flor de Tuna"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <h3 class="footer-logo-title">Flor de Tuna</h3>
+
+          <address>
+            <p>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Ctra. de Medina, 91 – Chiclana de la Frontera, Cádiz
+            </p>
+
+            <p>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <a
+                href="tel:+34620865435"
+                aria-label="Llamar al restaurante Flor de Tuna"
+              >
+                +34 620 865 435
+              </a>
+            </p>
+
+            <p>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a
+                href="mailto:walterale2002@gmail.com"
+                aria-label="Enviar correo a Flor de Tuna"
+              >
+                walterale2002@gmail.com
+              </a>
+            </p>
+          </address>
+        </section>
+
+        <!-- Redes sociales -->
+        <section
+          class="footer-col footer-redes"
+          aria-labelledby="footer-social-title"
+        >
+          <h4 id="footer-social-title">Síguenos</h4>
+          <ul>
+            <li>
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <a
+                href="https://www.instagram.com/flordetunarestaurante"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Visitar el Instagram oficial de Flor de Tuna"
+              >
+                @flordetunarestaurante
+              </a>
+            </li>
+
+            <li>
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <a
+                href="https://www.facebook.com/p/Flor-de-Tuna-Restaurante-100067846746882"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Visitar la página oficial de Facebook de Flor de Tuna"
+              >
+                Flor de Tuna Restaurante
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Plataformas -->
+        <section class="footer-col" aria-labelledby="footer-plataformas-title">
+          <h4 id="footer-plataformas-title">Plataformas</h4>
+
+          <a
+            href="https://www.bodas.net/restaurantes/flor-de-tuna--e240990"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Perfil de Flor de Tuna en Bodas.net"
+          >
+            <div class="platform-badge bodas">
+              <img
+                src="assets/imagenes/boda_net_logo.png"
+                alt="Logo de Bodas.net"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </a>
+
+          <a
+            href="https://www.tripadvisor.es/Restaurant_Review-g187433-d7990585-Reviews-Flor-de-Tuna"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Opiniones de Flor de Tuna en Tripadvisor"
+          >
+            <div class="platform-badge">
+              <img
+                src="assets/imagenes/tripadvisor_logo.png"
+                alt="Logo de Tripadvisor"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </a>
+
+          <a
+            href="https://www.thefork.es/restaurante/flor-de-tuna-r841422"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Reservas en Flor de Tuna a través de TheFork"
+          >
+            <div class="platform-badge">
+              <img
+                src="assets/imagenes/the_fork_logo.png"
+                alt="Logo de TheFork"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </a>
+        </section>
+      </div>
+
+      <div class="footer-copy">
+        © 2025 Flor de Tuna. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>
